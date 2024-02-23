@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>Marker based AR Portfolio</title>
+
+  <!-- Import A-Frame and then AR.js -->
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+
+  <!-- A-frame scene -->
+  <a-scene vr-mode-ui="enabled: false;" embedded arjs="sourceType: webcam; 
+  sourceWidth:1280; sourceHeight:960; 
+  displayWidth: 1280; displayHeight: 960; 
+  debugUIEnabled: false;">
+
+    <a-assets>
+
+      <img id="card2" src="PRO-C187-Student-Boilerplate-main/VR-AR-ProjectCards/2.png">
+      <img id="card3" src="PRO-C187-Student-Boilerplate-main/VR-AR-ProjectCards/3.png">
+      <img id="card4" src="PRO-C187-Student-Boilerplate-main/VR-AR-ProjectCards/4.png">
+
+    </a-assets>
+
+    <a-marker type="pattern" url = "PRO-C187-Student-Boilerplate-main/assets/icon-01.png" >
+      <a-plane src="#card2" position = "0 -1 0" rotation = "0 0 0" width = "1.5" height = "1.5" rotation="-90 0 0"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url = "PRO-C187-Student-Boilerplate-main/assets/icon-04.png" >
+      <a-plane src="#card3" position = "0 -1 0" rotation = "0 0 0" width = "1.5" height = "1.5" rotation="-90 0 0"></a-plane>
+    </a-marker>
+
+    <a-marker type="pattern" url = "PRO-C187-Student-Boilerplate-main/assets/icon-06.png" >
+      <a-plane src="#card4" position = "0 -1 0" rotation = "0 0 0" width = "1.5" height = "1.5" rotation="-90 0 0"></a-plane>
+    </a-marker>
+
+  </a-scene>
+ 
+</body>
+
+
+</html>
